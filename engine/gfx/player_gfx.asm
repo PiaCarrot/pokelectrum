@@ -69,6 +69,26 @@ ShowPlayerNamingChoices:
 	call CopyNameFromMenu
 	call CloseWindow
 	ret
+	
+ShowRivalNamingChoices:
+	ld hl, SilverNameMenuHeader
+	call LoadMenuHeader
+	call VerticalMenu
+	ld a, [wMenuCursorY]
+	dec a
+	call CopyNameFromMenu
+	call CloseWindow
+	ret
+	
+ShowMomsNamingChoices:
+	ld hl, MomsNameMenuHeader
+	call LoadMenuHeader
+	call VerticalMenu
+	ld a, [wMenuCursorY]
+	dec a
+	call CopyNameFromMenu
+	call CloseWindow
+	ret
 
 INCLUDE "data/player_names.asm"
 

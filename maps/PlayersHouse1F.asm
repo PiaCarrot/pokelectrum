@@ -153,6 +153,8 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
+	writetext NeighborText
+	special NameMom
 	checktime MORN
 	iftrue .MornScript
 	checktime DAY
@@ -322,33 +324,27 @@ NeighborMornIntroText:
 	text "Good morning,"
 	line "<PLAY_G>!"
 
-	para "I'm visiting!"
+	para "I'm visiting"
+	line "<MOM>!"
 	done
 
 NeighborDayIntroText:
 	text "Hello, <PLAY_G>!"
-	line "I'm visiting!"
+	line "I'm visiting"
+	cont "<MOM>!"
 	done
 
 NeighborNiteIntroText:
 	text "Good evening,"
 	line "<PLAY_G>!"
 
-	para "I'm visiting!"
+	para "I'm visiting"
+	line "<MOM>!"
 	done
 
 NeighborText:
-	text "<PLAY_G>, have you"
-	line "heard?"
-
-	para "My daughter is"
-	line "adamant about"
-
-	para "becoming PROF."
-	line "ELM's assistant."
-
-	para "She really loves"
-	line "#MON!"
+	text "What do you"
+	line "call your mom?"
 	done
 
 StoveText:

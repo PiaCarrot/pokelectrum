@@ -92,6 +92,28 @@ NameRival:
 
 .default
 	db "SILVER@"
+	
+NameMom:
+	farcall ShowMomsNamingChoices
+	ld a, [wMenuCursorY]
+	dec a
+	jr z, .NewName
+	farcall StoreMomsName
+	ret
+
+.NewName
+	ld b, NAME_MOM
+	ld de, wMomsName
+	farcall _NamingScreen
+	
+	; default to "MOM"
+	ld hl, wMomsName
+	ld de, .default
+	call InitName
+	ret
+
+.default
+	db "MOM@"
 
 NameRater:
 	farcall _NameRater
