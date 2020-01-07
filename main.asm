@@ -256,7 +256,6 @@ INCLUDE "engine/pokemon/switchpartymons.asm"
 INCLUDE "engine/gfx/load_pics.asm"
 INCLUDE "engine/pokemon/move_mon_wo_mail.asm"
 INCLUDE "data/pokemon/base_stats.asm"
-INCLUDE "data/pokemon/names.asm"
 
 UnknownEggPic::
 ; Another egg pic. This is shifted up a few pixels.
@@ -683,3 +682,8 @@ INCLUDE "engine/16/table_functions.asm"
 
 ; own section
 INCLUDE "data/trainers/parties.asm"
+
+SECTION "Pokemon Names", ROMX
+
+INCLUDE "data/pokemon/names.asm"
+

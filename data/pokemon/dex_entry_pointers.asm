@@ -251,3 +251,42 @@ PokedexDataPointerTable:
 	dba LugiaPokedexEntry
 	dba HoOhPokedexEntry
 	dba CelebiPokedexEntry
+	dba FlambearPokedexEntry
+	dba VolbearPokedexEntry
+	dba DynabearPokedexEntry
+	dba CruzPokedexEntry
+	dba AquaPokedexEntry
+	dba AquariaPokedexEntry
+	dba TrifoxPokedexEntry
+	dba TangelPokedexEntry
+	dba TangrowthPokedexEntry
+	dba NumpuffPokedexEntry
+	dba GolppyPokedexEntry
+	dba SunmolaPokedexEntry
+	dba AnchoragePokedexEntry
+	dba GrotessPokedexEntry
+	dba ParaPokedexEntry
+	dba LykwysePokedexEntry
+	dba ChiksPokedexEntry
+	dba TwinzPokedexEntry
+	dba MeowsyPokedexEntry
+	dba RinrinPokedexEntry
+	dba BellarunPokedexEntry
+	dba MinicornPokedexEntry
+	dba TurbannPokedexEntry
+	dba GrimeyPokedexEntry
+	dba PuddiPokedexEntry
+	dba MimeJrPokedexEntry
+	dba BelmittPokedexEntry
+	dba BomseelPokedexEntry
+	dba KotoraPokedexEntry
+	dba RaitoraPokedexEntry
+	dba MadamePokedexEntry
+	dba KurstrawPokedexEntry
+	dba KyonpanPokedexEntry
+	dba PluxPokedexEntry
+	dba WolfmanPokedexEntry
+	dba WarwolfPokedexEntry
+	dba LickilickyPokedexEntry
+	dba LeafeonPokedexEntry
+	dba GorochuPokedexEntry

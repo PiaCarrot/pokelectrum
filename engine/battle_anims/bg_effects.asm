@@ -283,7 +283,7 @@ BattleBGEffect_AlternateHues:
 BattleBGEffect_06:
 	call BattleBGEffects_CheckSGB
 	jr nz, .sgb
-	ld de, .PalsCGB
+	ld de, .PalsSGB
 	jr .okay
 
 .sgb
@@ -306,7 +306,7 @@ BattleBGEffect_06:
 BattleBGEffect_07:
 	call BattleBGEffects_CheckSGB
 	jr nz, .sgb
-	ld de, .PalsCGB
+	ld de, .PalsSGB
 	jr .okay
 
 .sgb

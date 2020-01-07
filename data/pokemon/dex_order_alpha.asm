@@ -252,3 +252,42 @@ AlphabeticalPokedexOrder:
 	dw YANMA
 	dw ZAPDOS
 	dw ZUBAT
+	dw FLAMBEAR
+	dw VOLBEAR
+	dw DYNABEAR
+	dw CRUZ
+	dw AQUA
+	dw AQUARIA
+	dw TRIFOX
+	dw TANGEL
+	dw TANGROWTH
+	dw NUMPUFF
+	dw GOLPPY
+	dw SUNMOLA
+	dw ANCHORAGE
+	dw GROTESS
+	dw PARA
+	dw LYKWYSE
+	dw CHIKS
+	dw TWINZ
+	dw MEOWSY
+	dw RINRIN
+	dw BELLARUN
+	dw MINICORN
+	dw TURBANN
+	dw GRIMEY
+	dw PUDDI
+	dw MIME_JR
+	dw BELMITT
+	dw BOMSEEL
+	dw KOTORA
+	dw RAITORA
+	dw MADAME
+	dw KURSTRAW
+	dw KYONPAN
+	dw PLUX
+	dw WOLFMAN
+	dw WARWOLF
+	dw LICKILICKY
+	dw LEAFEON
+	dw GOROCHU

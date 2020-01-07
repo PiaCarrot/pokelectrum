@@ -191,19 +191,11 @@ Unreferenced_Function8b4d:
 	jp LoadHLPaletteIntoDE
 
 Unreferenced_Function8b67:
-	call CheckCGB
-	jr nz, .cgb
 	ldh a, [hSGB]
 	and a
 	ret z
 	ld hl, PalPacket_Pack
 	jp PushSGBPals
-
-.cgb
-	ld de, wOBPals1
-	ld a, PREDEFPAL_PACK
-	call GetPredefPal
-	jp LoadHLPaletteIntoDE
 
 Unreferenced_Function8b81:
 	call CheckCGB

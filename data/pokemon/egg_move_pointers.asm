@@ -250,3 +250,42 @@ EggMovePointers::
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons
+	dw NoEggMoves ;newmons

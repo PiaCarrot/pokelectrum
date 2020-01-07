@@ -143,6 +143,7 @@ ENDM
 	map_const ROCK_TUNNEL_1F,                              15, 18 ; 87
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 88
 	map_const VICTORY_ROAD,                                10, 36 ; 91
+	map_const SILENT_HILLS,  			                   25, 18 ; 15
 
 	newgroup                                                      ;  4
 
@@ -449,6 +450,7 @@ ENDM
 	map_const ROUTE_29_ROUTE_46_GATE,                       5,  4 ; 13
 	map_const SILENT_TOWN,								   10,  9
 	map_const SILENT_FOREST,							   20, 18
+	map_const ROUTE_01,									   25, 18
 
 	newgroup                                                      ; 25
 
@@ -480,5 +482,3 @@ ENDM
 	map_const ROUTE_30_BERRY_HOUSE,                         4,  4 ;  9
 	map_const MR_POKEMONS_HOUSE,                            4,  4 ; 10
 	map_const ROUTE_31_VIOLET_GATE,                         5,  4 ; 11
-	map_const ROUTE_01,									   25, 18
-	map_const SILENT_HILLS,  			                   25, 18 ; 15

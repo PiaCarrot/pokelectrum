@@ -252,3 +252,42 @@ EvosAttacksPointers::
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
+	dw FlambearEvosAttacks
+	dw VolbearEvosAttacks
+	dw DynabearEvosAttacks
+	dw CruzEvosAttacks
+	dw AquaEvosAttacks
+	dw AquariaEvosAttacks
+	dw TrifoxEvosAttacks
+	dw TangelEvosAttacks
+	dw TangrowthEvosAttacks
+	dw NumpuffEvosAttacks
+	dw GolppyEvosAttacks
+	dw SunmolaEvosAttacks
+	dw AnchorageEvosAttacks
+	dw GrotessEvosAttacks
+	dw ParaEvosAttacks
+	dw LykwyseEvosAttacks
+	dw ChiksEvosAttacks
+	dw TwinzEvosAttacks
+	dw MeowsyEvosAttacks
+	dw RinrinEvosAttacks
+	dw BellarunEvosAttacks
+	dw MinicornEvosAttacks
+	dw TurbannEvosAttacks
+	dw GrimeyEvosAttacks
+	dw PuddiEvosAttacks
+	dw MimeJrEvosAttacks
+	dw BelmittEvosAttacks
+	dw BomseelEvosAttacks
+	dw KotoraEvosAttacks
+	dw RaitoraEvosAttacks
+	dw MadameEvosAttacks
+	dw KurstrawEvosAttacks
+	dw KyonpanEvosAttacks
+	dw PluxEvosAttacks
+	dw WolfmanEvosAttacks
+	dw WarwolfEvosAttacks
+	dw LickilickyEvosAttacks
+	dw LeafeonEvosAttacks
+	dw GorochuEvosAttacks

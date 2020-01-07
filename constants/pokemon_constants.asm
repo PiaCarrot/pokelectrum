@@ -17,7 +17,6 @@
 ; - AnimationIdlePointers (see gfx/pokemon/idle_pointers.asm)
 ; - BitmasksPointers (see gfx/pokemon/bitmask_pointers.asm)
 ; - FramesPointers (see gfx/pokemon/frame_pointers.asm)
-; - Footprints (see gfx/footprints.asm)
 	const_def 1
 	const BULBASAUR  ; 01
 	const IVYSAUR    ; 02
@@ -271,6 +270,46 @@ JOHTO_POKEMON EQU const_value
 	const LUGIA      ; f9
 	const HO_OH      ; fa
 	const CELEBI     ; fb
+	const FLAMBEAR
+	const VOLBEAR
+	const DYNABEAR
+	const CRUZ
+	const AQUA
+	const AQUARIA
+	const TRIFOX
+	const TANGEL
+	const TANGROWTH
+	const NUMPUFF
+	const GOLPPY
+	const SUNMOLA
+	const ANCHORAGE
+	const GROTESS
+	const PARA
+	const LYKWYSE
+	const CHIKS
+	const TWINZ
+	const MEOWSY
+	const RINRIN
+	const BELLARUN
+	const MINICORN
+	const TURBANN
+	const GRIMEY
+	const PUDDI
+	const MIME_JR
+	const BELMITT
+	const BOMSEEL
+	const KOTORA
+	const RAITORA
+	const MADAME
+	const KURSTRAW
+	const KYONPAN
+	const PLUX
+	const WOLFMAN
+	const WARWOLF
+	const LICKILICKY
+	const LEAFEON
+	const GOROCHU
+
 NUM_POKEMON EQU const_value + -1
 
 EGG EQU -3

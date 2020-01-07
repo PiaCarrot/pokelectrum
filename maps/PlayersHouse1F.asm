@@ -153,8 +153,14 @@ MomScript:
 NeighborScript:
 	faceplayer
 	opentext
-	writetext NeighborText
-	special NameMom
+	setflag ENGINE_POKEDEX
+	givepoke CHIKORITA, 10
+	givepoke PIKACHU, 10
+	givepoke GOROCHU, 10
+	givepoke BULBASAUR, 10
+	givepoke AQUARIA, 10
+;	writetext NeighborText
+;	special NameMom
 	checktime MORN
 	iftrue .MornScript
 	checktime DAY
