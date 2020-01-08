@@ -1,61 +1,72 @@
-GetPokemonIndexFromID::
-	; in: a = 8-bit index
-	; out: hl = 16-bit index; a clobbered
-	ld h, a
+___conversion_table_homecall: MACRO
+	; macro arguments: homecall type, function label
+	; all functions clobber af and hl (except for outputs) and preserve bc and de
+	; homecall types:
+	; - read: index to ID conversion (in: a = 8-bit ID; out: hl = 16-bit index)
+	; - write: ID to index conversion (in: hl = 16-bit index; out: a = 8-bit ID)
+	; - lock: ID locking (in: a = ID (or zero to unlock), l = position; out: a = preserved)
+	if strcmp("\1", "read") && strcmp("\1", "write") && strcmp("\1", "lock")
+		fail "16-bit homecall: invalid call type"
+	endc
+
+	if "\1" != "write"
+		ld h, a
+	endc
 	ldh a, [hROMBank]
 	push af
-	ld a, BANK(_GetPokemonIndexFromID)
+	ld a, BANK(\2)
 	rst Bankswitch
-	ld a, h
-	call _GetPokemonIndexFromID
+	if "\1" == "read"
+		ld a, h
+	endc
+	call \2
+	if "\1" != "read"
+		ld l, a
+	endc
 	pop af
 	rst Bankswitch
+	if "\1" != "read"
+		ld a, l
+	endc
 	ret
+ENDM
 
-GetPokemonIDFromIndex::
-	; in: hl = 16-bit index
-	; out: a = 8-bit index, hl clobbered
-	ldh a, [hROMBank]
-	push af
-	ld a, BANK(_GetPokemonIDFromIndex)
-	rst Bankswitch
-	call _GetPokemonIDFromIndex
-	ld l, a
-	pop af
-	rst Bankswitch
-	ld a, l
-	ret
-
-LockPokemonID::
-	; in: a = 8-bit index or zero (to clear), l = position
-	; out: a = unchanged, hl = clobbered, carry = set if error
-	ld h, a
-	ldh a, [hROMBank]
-	push af
-	ld a, BANK(_LockPokemonID)
-	rst Bankswitch
-	call _LockPokemonID
-	pop hl
-	ld l, a
-	ld a, h
-	rst Bankswitch
-	ld a, l
-	ret
-
-GetLockedPokemonID::
+___conversion_table_homecall_readlocked: MACRO
+	; macro argument: table name
 	; in: a = position
 	; out: a = 8-bit index; everything else preserved
 	push hl
-	add a, LOW(wPokemonIndexTableLockedEntries)
+	add a, LOW(\1LockedEntries)
 	ld l, a
 	ldh a, [rSVBK]
 	ld h, a
-	ld a, BANK(wPokemonIndexTableLockedEntries)
+	ld a, BANK(\1LockedEntries)
 	ldh [rSVBK], a
 	ld a, h
-	ld h, HIGH(wPokemonIndexTableLockedEntries)
+	ld h, HIGH(\1LockedEntries)
 	ld l, [hl]
 	ldh [rSVBK], a
 	ld a, l
 	pop hl
 	ret
+ENDM
+
+; in: a = 8-bit index
+; out: hl = 16-bit index; a clobbered
+GetPokemonIndexFromID::
+	___conversion_table_homecall read, _GetPokemonIndexFromID
+
+; in: hl = 16-bit index
+; out: a = 8-bit index, hl clobbered
+GetPokemonIDFromIndex::
+	___conversion_table_homecall write, _GetPokemonIDFromIndex
+
+; in: a = 8-bit index or zero (to clear), l = position
+; out: a = unchanged, hl = clobbered
+LockPokemonID::
+	___conversion_table_homecall lock, _LockPokemonID
+
+; in: a = position
+; out: a = 8-bit index; everything else preserved
+GetLockedPokemonID::
+	___conversion_table_homecall_readlocked wPokemonIndexTable
