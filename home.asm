@@ -192,7 +192,10 @@ CountSetBits16::
 	jr z, .small_count
 	ld bc, 0
 	and $f
-	call nz, .small_count
+	jr z, .loop
+	push de
+	call .small_count
+	pop de
 .loop
 	push bc
 	push de
