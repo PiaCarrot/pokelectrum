@@ -1,4 +1,4 @@
-roms := pokecrystal.gbc
+roms := pokelectrum.gbc
 
 crystal_obj := \
 audio.o \
@@ -39,7 +39,7 @@ RGBLINK ?= $(RGBDS)rgblink
 .PRECIOUS:
 .SECONDARY:
 
-all: pokecrystal.gbc
+all: pokelectrum.gbc
 
 clean: tidy
 	find gfx \( -name "*.[12]bpp" -o -name "*.lz" -o -name "*.gbcpal" \) -delete
@@ -74,10 +74,10 @@ $(foreach obj, $(crystal_obj), $(eval $(call DEP,$(obj),$(obj:.o=.asm))))
 endif
 
 
-pokecrystal.gbc: $(crystal_obj) pokecrystal.link
-	$(RGBLINK) -n pokecrystal.sym -m pokecrystal.map -l pokecrystal.link -o $@ $(crystal_obj)
+pokelectrum.gbc: $(crystal_obj) pokelectrum.link
+	$(RGBLINK) -n pokelectrum.sym -m pokelectrum.map -l pokelectrum.link -o $@ $(crystal_obj)
 	$(RGBFIX) -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
-	tools/sort_symfile.sh pokecrystal.sym
+	tools/sort_symfile.sh pokelectrum.sym
 
 %.lz: %
 	tools/lzcomp -- $< $@
