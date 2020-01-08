@@ -123,8 +123,10 @@ AnimateHallOfFame:
 	hlcoord 1, 2
 	call PlaceString
 	call WaitBGMap
-	call HOF_PlayCry
-	ld c, 180
+	decoord 6, 5
+	ld c, ANIM_MON_HOF
+	predef HOF_AnimateFrontpic
+	ld c, 60
 	call DelayFrames
 	and a
 	ret
@@ -401,7 +403,9 @@ _HallOfFamePC:
 	ld b, SCGB_PLAYER_OR_MON_FRONTPIC_PALS
 	call GetSGBLayout
 	call SetPalettes
-	call HOF_PlayCry
+	decoord 6, 5
+	ld c, ANIM_MON_HOF
+	predef HOF_AnimateFrontpic
 	and a
 	ret
 
@@ -544,6 +548,10 @@ DisplayHOFMon:
 
 HOF_AnimatePlayerPic:
 	call ClearBGPalettes
+	ld hl, vTiles2 tile HALLOFFAME_COLON
+	ld de, FontExtra + 13 tiles ; "<COLON>"
+	lb bc, BANK(FontExtra), 1
+	call Request2bpp
 	hlcoord 0, 0
 	ld bc, SCREEN_WIDTH * SCREEN_HEIGHT
 	ld a, " "
@@ -613,7 +621,7 @@ HOF_AnimatePlayerPic:
 	ld de, wGameTimeHours
 	lb bc, 2, 3
 	call PrintNum
-	ld [hl], "<COLON>"
+	ld [hl], HALLOFFAME_COLON
 	inc hl
 	ld de, wGameTimeMinutes
 	lb bc, PRINTNUM_LEADINGZEROS | 1, 2
@@ -624,18 +632,3 @@ HOF_AnimatePlayerPic:
 
 .PlayTime:
 	db "PLAY TIME@"
-
-HOF_PlayCry::
-	ld a, [wCurPartySpecies]
-	cp EGG
-	jr z, .fail
-	call IsAPokemon
-	jr c, .fail
-	ld a, [wCurPartySpecies]
-	call PlayMonCry2
-	ret
-
-.fail
-	ld a, 1
-	ld [wCurPartySpecies], a
-	ret

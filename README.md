@@ -25,6 +25,9 @@ For further documentation, check out the [wiki].
   quality-of-life improvements intended to make development easier. These improvements have been taken from the
   documentation in the [main disassembly repository][pokecrystal]. This branch contains no 16-bit features and it is
   only intended as a reference.
+* `base-components`: this branch defines the basic components that will comprise the 16-bit index table system, on top
+  of which the remaining branches will be built. Since it only defines macros (and a handful of WRAM locations to be
+  shared by all index tables), it should build the same ROM as `master`.
 * `expand-mon-ID`: this branch implements 16-bit indexes for Pokémon species, thus allowing more than 253 species to
   be included in a single game.
 
@@ -57,4 +60,3 @@ that will go beyond indexes.
 [compare]: https://github.com/aaaaaa123456789/pokecrystal16/compare
 [pokecrystal]: https://github.com/pret/pokecrystal/
 [wiki]: https://github.com/aaaaaa123456789/pokecrystal16/wiki
-# pokelectrum

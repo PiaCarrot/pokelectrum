@@ -1464,7 +1464,7 @@ Function17d93a:
 	add hl, de
 	ld e, l
 	ld d, h
-	farcall HOF_PlayCry
+	farcall HOF_AnimateFrontpic
 	pop af
 	ldh [rSVBK], a
 	call Function17e349

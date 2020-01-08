@@ -87,7 +87,13 @@ pokecrystal.gbc: $(crystal_obj) pokecrystal.link
 
 gfx/pokemon/%/front.animated.2bpp: gfx/pokemon/%/front.2bpp gfx/pokemon/%/front.dimensions
 	tools/pokemon_animation_graphics -o $@ $^
-	tools/trim_animation.sh $@ $(word 2,$^)
+gfx/pokemon/%/front.animated.tilemap: gfx/pokemon/%/front.2bpp gfx/pokemon/%/front.dimensions
+	tools/pokemon_animation_graphics -t $@ $^
+gfx/pokemon/%/bitmask.asm: gfx/pokemon/%/front.animated.tilemap gfx/pokemon/%/front.dimensions
+	tools/pokemon_animation -b $^ > $@
+gfx/pokemon/%/frames.asm: gfx/pokemon/%/front.animated.tilemap gfx/pokemon/%/front.dimensions
+	tools/pokemon_animation -f $^ > $@
+
 
 ### Misc file-specific graphics rules
 

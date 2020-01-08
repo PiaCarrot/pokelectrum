@@ -1,13 +1,13 @@
-MAP_NAME_SIGN_START EQU $c0
+MAP_NAME_SIGN_START EQU $60
 
 ReturnFromMapSetupScript::
 	xor a
 	ldh [hBGMapMode], a
-;	farcall .inefficient_farcall ; this is a waste of 6 ROM bytes and 6 stack bytes
-;	ret
+	farcall .inefficient_farcall ; this is a waste of 6 ROM bytes and 6 stack bytes
+	ret
 
 ; should have just been a fallthrough
-;.inefficient_farcall
+.inefficient_farcall
 	ld a, [wMapGroup]
 	ld b, a
 	ld a, [wMapNumber]
@@ -126,7 +126,7 @@ PlaceMapNameSign::
 
 LoadMapNameSignGFX:
 	ld de, MapEntryFrameGFX
-	ld hl, vTiles0 tile MAP_NAME_SIGN_START
+	ld hl, vTiles2 tile MAP_NAME_SIGN_START
 	lb bc, BANK(MapEntryFrameGFX), 14
 	call Get2bpp
 	ret
