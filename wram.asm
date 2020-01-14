@@ -2221,11 +2221,8 @@ wBaseItems:: ; d241
 wBaseItem1:: db ; d241
 wBaseItem2:: db ; d242
 wBaseGender:: db ; d243
-wBaseUnknown1:: db ; d244
 wBaseEggSteps:: db ; d245
-wBaseUnknown2:: db ; d246
 wBasePicSize:: db ; d247
-wBasePadding:: ds 4 ; d248
 wBaseGrowthRate:: db ; d24c
 wBaseEggGroups:: db ; d24d
 wBaseTMHM:: flag_array NUM_TM_HM_TUTOR ; d24e
@@ -2876,15 +2873,7 @@ wPartyMonNicknamesEnd::
 
 	ds 22
 
-wPokedexCaught:: flag_array NUM_POKEMON ; de99
-wEndPokedexCaught::
 
-wPokedexSeen:: flag_array NUM_POKEMON ; deb9
-wEndPokedexSeen::
-
-wUnownDex:: ds NUM_UNOWN ; ded9
-wUnlockedUnowns:: db ; def3
-wFirstUnownSeen:: db
 
 wDayCareMan:: ; def5
 ; bit 7: active
@@ -2942,6 +2931,17 @@ wMagikarpRecordHoldersName:: ds NAME_LENGTH
 wPokemonDataEnd::
 wGameDataEnd::
 ; dff5
+
+SECTION "Pokedex", WRAMX ;broken
+wPokedexCaught:: flag_array NUM_POKEMON ; de99
+wEndPokedexCaught::
+
+wPokedexSeen:: flag_array NUM_POKEMON ; deb9
+wEndPokedexSeen::
+
+wUnownDex:: ds NUM_UNOWN ; ded9
+wUnlockedUnowns:: db ; def3
+wFirstUnownSeen:: db
 
 
 SECTION "Pic Animations", WRAMX

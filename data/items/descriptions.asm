@@ -24,7 +24,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw QuestionMarkDesc
+	dw HeartStoneDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -44,22 +44,20 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw QuestionMarkDesc
+	dw PoisonStoneDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw QuestionMarkDesc
+	dw MistStoneDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
 	dw CoinCaseDesc
 	dw ItemfinderDesc
-	dw QuestionMarkDesc
 	dw ExpShareDesc
 	dw OldRodDesc
 	dw GoodRodDesc
-	dw SilverLeafDesc
 	dw SuperRodDesc
 	dw PPUpDesc
 	dw EtherDesc
@@ -74,7 +72,6 @@ ItemDescriptions:
 	dw MoomooMilkDesc
 	dw QuickClawDesc
 	dw PsnCureBerryDesc
-	dw GoldLeafDesc
 	dw SoftSandDesc
 	dw SharpBeakDesc
 	dw PrzCureBerryDesc
@@ -89,7 +86,6 @@ ItemDescriptions:
 	dw BigMushroomDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
-	dw QuestionMarkDesc
 	dw AmuletCoinDesc
 	dw YlwApricornDesc
 	dw GrnApricornDesc
@@ -99,7 +95,6 @@ ItemDescriptions:
 	dw WhtApricornDesc
 	dw BlackbeltDesc
 	dw BlkApricornDesc
-	dw QuestionMarkDesc
 	dw PnkApricornDesc
 	dw BlackGlassesDesc
 	dw SlowpokeTailDesc
@@ -113,13 +108,11 @@ ItemDescriptions:
 	dw BigPearlDesc
 	dw EverStoneDesc
 	dw SpellTagDesc
-	dw RageCandyBarDesc
 	dw GSBallDesc
 	dw BlueCardDesc
 	dw MiracleSeedDesc
 	dw ThickClubDesc
 	dw FocusBandDesc
-	dw QuestionMarkDesc
 	dw EnergyPowderDesc
 	dw EnergyRootDesc
 	dw HealPowderDesc
@@ -134,34 +127,21 @@ ItemDescriptions:
 	dw StarPieceDesc
 	dw BasementKeyDesc
 	dw PassDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw CharcoalDesc
 	dw BerryJuiceDesc
 	dw ScopeLensDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw MetalCoatDesc
 	dw DragonFangDesc
-	dw QuestionMarkDesc
 	dw LeftoversDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
-	dw QuestionMarkDesc
 	dw SacredAshDesc
 	dw HeavyBallDesc
-	dw FlowerMailDesc
+	dw MailDesc
 	dw LevelBallDesc
 	dw LureBallDesc
 	dw FastBallDesc
-	dw QuestionMarkDesc
 	dw LightBallDesc
 	dw FriendBallDesc
 	dw MoonBallDesc
@@ -170,25 +150,13 @@ ItemDescriptions:
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
 	dw PolkadotBowDesc
-	dw QuestionMarkDesc
 	dw UpGradeDesc
 	dw BerryDesc
 	dw GoldBerryDesc
 	dw SquirtBottleDesc
-	dw QuestionMarkDesc
 	dw ParkBallDesc
 	dw RainbowWingDesc
-	dw QuestionMarkDesc
-	dw BrickPieceDesc
-	dw SurfMailDesc
-	dw LiteBlueMailDesc
-	dw PortraitMailDesc
-	dw LovelyMailDesc
-	dw EonMailDesc
-	dw MorphMailDesc
-	dw BlueSkyMailDesc
-	dw MusicMailDesc
-	dw MewMailDesc
+	dw HoneyDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
 	dw QuestionMarkDesc
@@ -472,10 +440,6 @@ GoodRodDesc:
 	db   "A good ROD for"
 	next "catching #MON.@"
 
-SilverLeafDesc:
-	db   "A strange, silver-"
-	next "colored leaf.@"
-
 SuperRodDesc:
 	db   "The best ROD for"
 	next "catching #MON.@"
@@ -531,10 +495,6 @@ QuickClawDesc:
 PsnCureBerryDesc:
 	db   "A self-cure for"
 	next "poison. (HOLD)@"
-
-GoldLeafDesc:
-	db   "A strange, gold-"
-	next "colored leaf.@"
 
 SoftSandDesc:
 	db   "Powers up ground-"
@@ -675,10 +635,6 @@ SpellTagDesc:
 	db   "Powers up ghost-"
 	next "type moves. (HOLD)@"
 
-RageCandyBarDesc:
-	db   "Restores #MON"
-	next "HP by 20.@"
-
 GSBallDesc:
 	db   "The mysterious"
 	next "BALL.@"
@@ -798,7 +754,7 @@ HeavyBallDesc:
 	db   "A BALL for catch-"
 	next "ing heavy #MON.@"
 
-FlowerMailDesc:
+MailDesc:
 	db   "Flower-print MAIL."
 	next "(HOLD)@"
 
@@ -873,42 +829,18 @@ RainbowWingDesc:
 QuestionMarkDesc:
 	db   "?@"
 
-BrickPieceDesc:
-	db   "A rare chunk of"
-	next "tile.@"
-
-SurfMailDesc:
-	db   "LAPRAS-print MAIL."
-	next "(HOLD)@"
-
-LiteBlueMailDesc:
-	db   "DRATINI-print"
-	next "MAIL. (HOLD)@"
-
-PortraitMailDesc:
-	db   "MAIL featuring the"
-	next "holder's likeness.@"
-
-LovelyMailDesc:
-	db   "Heart-print MAIL."
-	next "(HOLD)@"
-
-EonMailDesc:
-	db   "EEVEE-print MAIL."
-	next "(HOLD)@"
-
-MorphMailDesc:
-	db   "DITTO-print MAIL."
-	next "(HOLD)@"
-
-BlueSkyMailDesc:
-	db   "Sky-print MAIL."
-	next "(HOLD)@"
-
-MusicMailDesc:
-	db   "NATU-print MAIL."
-	next "(HOLD)@"
-
-MewMailDesc:
-	db   "MEW-print MAIL."
-	next "(HOLD)@"
+HeartStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
+	
+PoisonStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
+	
+MistStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
+	
+HoneyDesc:
+	db   "Slather on"
+	next "small trees.@"

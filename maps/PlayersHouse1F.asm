@@ -154,11 +154,109 @@ NeighborScript:
 	faceplayer
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke CHIKORITA, 10
-	givepoke PIKACHU, 10
-	givepoke GOROCHU, 10
+	givepoke DYNABEAR, 10
+	givepoke CRUZ, 10
+	givepoke AQUA, 10
 	givepoke BULBASAUR, 10
 	givepoke AQUARIA, 10
+	giveitem HONEY
+	giveitem HEART_STONE
+	giveitem POTION
+	giveitem TM_DYNAMICPUNCH ; c2
+	giveitem TM_HEADBUTT     ; c3
+	giveitem TM_CURSE        ; c4
+	giveitem TM_ROLLOUT      ; c5
+	giveitem TM_ROAR         ; c6
+	giveitem TM_TOXIC        ; c7
+	giveitem TM_ZAP_CANNON   ; c8
+	giveitem TM_ROCK_SMASH   ; c9
+	giveitem TM_PSYCH_UP     ; ca
+	giveitem TM_HIDDEN_POWER ; cb
+	giveitem TM_SUNNY_DAY    ; cc
+	giveitem TM_SWEET_SCENT  ; cd
+	giveitem TM_SNORE        ; ce
+	giveitem TM_BLIZZARD     ; cf
+	giveitem TM_HYPER_BEAM   ; d0
+	giveitem TM_ICY_WIND     ; d1
+	giveitem TM_PROTECT      ; d2
+	giveitem TM_RAIN_DANCE   ; d3
+	giveitem TM_GIGA_DRAIN   ; d4
+	giveitem TM_ENDURE       ; d5
+	giveitem TM_FRUSTRATION  ; d6
+	giveitem TM_SOLARBEAM    ; d7
+	giveitem TM_IRON_TAIL    ; d8
+	giveitem TM_DRAGONBREATH ; d9
+	giveitem TM_THUNDER      ; da
+	giveitem TM_EARTHQUAKE   ; db
+	giveitem TM_RETURN       ; dc
+	giveitem TM_DIG          ; dd
+	giveitem TM_PSYCHIC_M    ; de
+	giveitem TM_SHADOW_BALL  ; df
+	giveitem TM_MUD_SLAP     ; e0
+	giveitem TM_DOUBLE_TEAM  ; e1
+	giveitem TM_ICE_PUNCH    ; e2
+	giveitem TM_SWAGGER      ; e3
+	giveitem TM_SLEEP_TALK   ; e4
+	giveitem TM_SLUDGE_BOMB  ; e5
+	giveitem TM_SANDSTORM    ; e6
+	giveitem TM_FIRE_BLAST   ; e7
+	giveitem TM_SWIFT        ; e8
+	giveitem TM_DEFENSE_CURL ; e9
+	giveitem TM_THUNDERPUNCH ; ea
+	giveitem TM_DREAM_EATER  ; eb
+	giveitem TM_DETECT       ; ec
+	giveitem TM_REST         ; ed
+	giveitem TM_ATTRACT      ; ee
+	giveitem TM_THIEF        ; ef
+	giveitem TM_STEEL_WING   ; f0
+	giveitem TM_FIRE_PUNCH   ; f1
+	giveitem TM_FURY_CUTTER  ; f2
+	giveitem TM_NIGHTMARE    ; f3
+	giveitem TM_MEGA_PUNCH
+	giveitem TM_RAZOR_WIND
+	giveitem TM_SWORDS_DANCE
+	giveitem TM_WHIRLWIND
+	giveitem TM_MEGA_KICK
+	giveitem TM_HORN_DRILL
+	giveitem TM_BODY_SLAM
+	giveitem TM_TAKE_DOWN
+	giveitem TM_DOUBLE_EDGE
+	giveitem TM_BUBBLEBEAM
+	giveitem TM_WATER_GUN
+	giveitem TM_ICE_BEAM
+	giveitem TM_PAY_DAY
+	giveitem TM_SUBMISSION
+	giveitem TM_COUNTER
+	giveitem TM_SEISMIC_TOSS
+	giveitem TM_RAGE
+	giveitem TM_MEGA_DRAIN
+	giveitem TM_DRAGON_RAGE
+	giveitem TM_THUNDERBOLT
+	giveitem TM_FISSURE
+	giveitem TM_TELEPORT
+	giveitem TM_MIMIC
+	giveitem TM_REFLECT
+	giveitem TM_BIDE
+	giveitem TM_METRONOME
+	giveitem TM_SELFDESTRUCT
+	giveitem TM_EGG_BOMB
+	giveitem TM_SKULL_BASH
+	giveitem TM_SOFTBOILED
+	giveitem TM_SKY_ATTACK
+	giveitem TM_THUNDER_WAVE
+	giveitem TM_PSYWAVE
+	giveitem TM_EXPLOSION
+	giveitem TM_ROCK_SLIDE
+	giveitem TM_TRI_ATTACK
+	giveitem TM_SUBSTITUTE
+	giveitem TM_FLAMETHROWER
+	giveitem HM_CUT
+	giveitem HM_FLY
+	giveitem HM_SURF
+	giveitem HM_STRENGTH
+	giveitem HM_FLASH
+	giveitem HM_WHIRLPOOL
+	giveitem HM_WATERFALL
 ;	writetext NeighborText
 ;	special NameMom
 	checktime MORN

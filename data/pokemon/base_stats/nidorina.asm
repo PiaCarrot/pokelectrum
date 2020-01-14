@@ -8,11 +8,11 @@
 	db 117 ; base exp
 	db NO_ITEM, NO_ITEM ; items
 	db GENDER_F100 ; gender ratio
-	db 100 ; unknown 1
+;	db 100 ; unknown 1
 	db 20 ; step cycles to hatch
-	db 5 ; unknown 2
+;	db 5 ; unknown 2
 	INCBIN "gfx/pokemon/nidorina/front.dimensions"
-	db 0, 0, 0, 0 ; padding
+;	db 0, 0, 0, 0 ; padding
 	db GROWTH_MEDIUM_SLOW ; growth rate
 	dn EGG_NONE, EGG_NONE ; egg groups
 
