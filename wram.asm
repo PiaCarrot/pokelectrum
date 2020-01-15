@@ -2699,8 +2699,6 @@ wParryFightCount::   db
 wErinFightCount::    db
 ; da0e
 
-	ds 100
-
 wEventFlags:: flag_array NUM_EVENTS ; da72
 ; db6c
 
@@ -2808,8 +2806,6 @@ wSafariBallsRemaining:: db ; dc79
 wSafariTimeRemaining:: dw ; dc7a
 
 wPhoneList:: ds CONTACT_LIST_SIZE ; dc7c
-; dc86
-	ds 23
 
 wLuckyNumberShowFlag:: db ; dc9d
 	ds 1
@@ -2871,9 +2867,15 @@ wPartyMonOT:: ds NAME_LENGTH * PARTY_LENGTH ; ddff
 wPartyMonNicknames:: ds MON_NAME_LENGTH * PARTY_LENGTH ; de41
 wPartyMonNicknamesEnd::
 
-	ds 22
+wPokedexCaught:: flag_array NUM_POKEMON ; de99
+wEndPokedexCaught::
 
+wPokedexSeen:: flag_array NUM_POKEMON ; deb9
+wEndPokedexSeen::
 
+wUnownDex:: ds NUM_UNOWN ; ded9
+wUnlockedUnowns:: db ; def3
+wFirstUnownSeen:: db
 
 wDayCareMan:: ; def5
 ; bit 7: active
@@ -2931,18 +2933,6 @@ wMagikarpRecordHoldersName:: ds NAME_LENGTH
 wPokemonDataEnd::
 wGameDataEnd::
 ; dff5
-
-SECTION "Pokedex", WRAMX ;broken
-wPokedexCaught:: flag_array NUM_POKEMON ; de99
-wEndPokedexCaught::
-
-wPokedexSeen:: flag_array NUM_POKEMON ; deb9
-wEndPokedexSeen::
-
-wUnownDex:: ds NUM_UNOWN ; ded9
-wUnlockedUnowns:: db ; def3
-wFirstUnownSeen:: db
-
 
 SECTION "Pic Animations", WRAMX
 
