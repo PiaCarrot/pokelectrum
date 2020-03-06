@@ -39,6 +39,11 @@ endr
 ENDM
 
 BaseData::
+	indirect_table $20, 1
+	indirect_entries NUM_POKEMON, BaseData1
+	indirect_table_end
+
+BaseData1:
 INCLUDE "data/pokemon/base_stats/bulbasaur.asm"
 INCLUDE "data/pokemon/base_stats/ivysaur.asm"
 INCLUDE "data/pokemon/base_stats/venusaur.asm"

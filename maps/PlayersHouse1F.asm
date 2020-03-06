@@ -154,11 +154,12 @@ NeighborScript:
 	faceplayer
 	opentext
 	setflag ENGINE_POKEDEX
-	givepoke DYNABEAR, 10
+	givepoke RAIKOU, 10
+	givepoke SUICUNE, 10
+	givepoke ENTEI, 10
+	givepoke FLAMBEAR, 10
+	givepoke CHIKORITA, 10
 	givepoke CRUZ, 10
-	givepoke AQUA, 10
-	givepoke BULBASAUR, 10
-	givepoke AQUARIA, 10
 	giveitem HONEY
 	giveitem HEART_STONE
 	giveitem POTION
