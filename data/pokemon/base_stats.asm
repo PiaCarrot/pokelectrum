@@ -39,7 +39,7 @@ endr
 ENDM
 
 BaseData::
-	indirect_table $20, 1
+	indirect_table $1E, 1
 	indirect_entries NUM_POKEMON, BaseData1
 	indirect_table_end
 
