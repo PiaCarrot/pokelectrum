@@ -88,12 +88,12 @@ ReturnFromMapSetupScript::
 
 .CheckNationalParkGate:
 	ld a, [wMapGroup]
-	cp GROUP_ROUTE_35_NATIONAL_PARK_GATE
+	cp GROUP_NONE
 	ret nz
 	ld a, [wMapNumber]
-	cp MAP_ROUTE_35_NATIONAL_PARK_GATE
+	cp MAP_NONE
 	ret z
-	cp MAP_ROUTE_36_NATIONAL_PARK_GATE
+	cp MAP_NONE
 	ret
 
 PlaceMapNameSign::

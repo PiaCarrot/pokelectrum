@@ -47,39 +47,39 @@ _TitleScreen:
 ; Apply logo gradient:
 
 ; lines 3-4
-	hlbgcoord 0, 3
+	hlbgcoord 0, 1
 	ld bc, 2 * BG_MAP_WIDTH
 	ld a, 2
 	call ByteFill
 ; line 5
-	hlbgcoord 0, 5
+	hlbgcoord 0, 3
 	ld bc, BG_MAP_WIDTH
 	ld a, 3
 	call ByteFill
 ; line 6
-	hlbgcoord 0, 6
+	hlbgcoord 0, 4
 	ld bc, BG_MAP_WIDTH
 	ld a, 4
 	call ByteFill
 ; line 7
-	hlbgcoord 0, 7
+	hlbgcoord 0, 5
 	ld bc, BG_MAP_WIDTH
 	ld a, 5
 	call ByteFill
 ; lines 8-9
-	hlbgcoord 0, 8
+	hlbgcoord 0, 6
 	ld bc, 2 * BG_MAP_WIDTH
 	ld a, 6
 	call ByteFill
 
 ; 'CRYSTAL VERSION'
-	hlbgcoord 5, 9
+	hlbgcoord 5, 7
 	ld bc, NAME_LENGTH ; length of version text
 	ld a, 1
 	call ByteFill
 
 ; Suicune gfx
-	hlbgcoord 0, 12
+	hlbgcoord 0, 11
 	ld bc, 6 * BG_MAP_WIDTH ; the rest of the screen
 	ld a, 0 | VRAM_BANK_1
 	call ByteFill
@@ -105,7 +105,7 @@ _TitleScreen:
 	call ByteFill
 
 ; Draw Pokemon logo
-	hlcoord 0, 3
+	hlcoord 0, 1
 	lb bc, 7, 20
 	ld d, $80
 	ld e, $14
@@ -159,7 +159,7 @@ _TitleScreen:
 ; (This part is actually totally pointless, you can't
 ;  see anything until these values are overwritten!)
 
-	ld b, 80 / 2 ; alternate for 80 lines
+	ld b, 60 / 2 ; alternate for 80 lines
 	ld hl, wLYOverrides
 .loop
 ; $00 is the middle position
@@ -171,9 +171,9 @@ _TitleScreen:
 	jr nz, .loop
 
 ; Make sure the rest of the buffer is empty
-	ld hl, wLYOverrides + 80
+	ld hl, wLYOverrides + 100
 	xor a
-	ld bc, wLYOverridesEnd - (wLYOverrides + 80)
+	ld bc, wLYOverridesEnd - (wLYOverrides + 100)
 	call ByteFill
 
 ; Let LCD Stat know we're messing around with SCX
@@ -252,7 +252,7 @@ SuicuneFrameIterator:
 	db $08 ; vTiles5 tile $08
 
 LoadSuicuneFrame:
-	hlcoord 6, 12
+	hlcoord 6, 11
 	ld b, 6
 .bgrows
 	ld c, 8

@@ -258,6 +258,7 @@ NeighborScript:
 	giveitem HM_FLASH
 	giveitem HM_WHIRLPOOL
 	giveitem HM_WATERFALL
+	callasm CheatFillPokedex
 ;	writetext NeighborText
 ;	special NameMom
 	checktime MORN
@@ -288,6 +289,20 @@ NeighborScript:
 	closetext
 	turnobject PLAYERSHOUSE1F_POKEFAN_F, RIGHT
 	end
+	
+CheatFillPokedex:
+	ld a, 1
+	ld [wFirstUnownSeen], a
+	ld hl, wPokedexSeen
+	call .Fill
+	ld hl, wPokedexCaught
+.Fill:
+	ld a, %11111111
+	ld bc, 36 ; 001-288
+	call ByteFill
+	ld a, %00000011
+	ld [hl], a ; 289-290
+	ret
 
 TVScript:
 	jumptext TVText

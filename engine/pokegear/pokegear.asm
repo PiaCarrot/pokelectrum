@@ -2291,7 +2291,7 @@ FlyMap:
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave.
-	ld a, FLY_MT_SILVER
+	ld a, FLY_N_A
 	ld [wEndFlypoint], a
 ; Fill out the map
 	call FillJohtoMap
@@ -2317,7 +2317,7 @@ FlyMap:
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
-	ld a, FLY_PALLET
+	ld a, FLY_N_A
 	ld [wStartFlypoint], a
 ; ...and end at Indigo Plateau
 	ld a, FLY_INDIGO
@@ -2341,7 +2341,7 @@ FlyMap:
 ; Flypoints begin at New Bark Town...
 	ld [wStartFlypoint], a
 ; ..and end at Silver Cave
-	ld a, FLY_MT_SILVER
+	ld a, FLY_N_A
 	ld [wEndFlypoint], a
 	call FillJohtoMap
 	pop af

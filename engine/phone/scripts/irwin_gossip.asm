@@ -7,7 +7,8 @@ IrwinRumorScript:
 	iftrue .TrainPass
 	checkflag ENGINE_MARSHBADGE
 	iftrue .MarshBadge
-	checkflag ENGINE_FLYPOINT_VERMILION
+; TODO: Change this flypoint and the various other dialog conditions.
+	checkflag ENGINE_FLYPOINT_NEW_BARK
 	iftrue .VermilionCity
 	checkevent EVENT_BEAT_ELITE_FOUR
 	iftrue .EliteFour
@@ -25,64 +26,64 @@ IrwinRumorScript:
 	iftrue .PlainBadge
 	farwritetext IrwinCalledRightAwayText
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .PlainBadge:
 	farwritetext UnknownText_0x64099
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .JasmineReturned:
 	farwritetext UnknownText_0x640e6
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .RocketHideout:
 	farwritetext UnknownText_0x6416d
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .RadioTower:
 	farwritetext UnknownText_0x641e8
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .RisingBadge:
 	farwritetext UnknownText_0x64247
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .EliteFour:
 	farwritetext UnknownText_0x642bb
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .VermilionCity:
 	farwritetext UnknownText_0x643d4
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .TrainPass:
 	farwritetext UnknownText_0x64448
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .Snorlax:
 	farwritetext UnknownText_0x6455b
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .MtSilver:
 	farwritetext UnknownText_0x645ff
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .FogBadge:
 	farwritetext UnknownText_0x646df
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male
 
 .MarshBadge:
 	farwritetext UnknownText_0x647d8
 	buttonsound
-	sjump PhoneScript_HangupText_Male
+	sjump PhoneScript_HangUpText_Male

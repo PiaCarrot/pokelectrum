@@ -25,7 +25,7 @@ RalphPhoneCalleeScript:
 RalphPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, FISHER, RALPH1
 	farscall PhoneScript_GreetPhone_Male
-	checkflag ENGINE_FLYPOINT_GOLDENROD
+	checkflag ENGINE_FLYPOINT_NEW_BARK
 	iffalse .CheckSwarm
 	checkflag ENGINE_RALPH
 	iftrue .CheckSwarm

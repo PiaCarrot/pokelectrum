@@ -16,17 +16,17 @@ AnthonyPhoneCalleeScript:
 	farsjump UnknownScript_0xa0950
 
 .WantsBattle:
-	getlandmarkname STRING_BUFFER_5, ROUTE_33
+	getlandmarkname STRING_BUFFER_5, NEW_BARK_TOWN
 	farsjump UnknownScript_0xa0a5f
 
 .AlreadySwarming:
-	getlandmarkname STRING_BUFFER_5, ROUTE_33
+	getlandmarkname STRING_BUFFER_5, NEW_BARK_TOWN
 	farsjump UnknownScript_0xa0afa
 
 AnthonyPhoneCallerScript:
 	gettrainername STRING_BUFFER_3, HIKER, ANTHONY2
 	farscall PhoneScript_GreetPhone_Male
-	checkflag ENGINE_FLYPOINT_GOLDENROD
+	checkflag ENGINE_FLYPOINT_NEW_BARK
 	iffalse .TriesSwarm
 	checkflag ENGINE_ANTHONY
 	iftrue .TriesSwarm
@@ -53,8 +53,8 @@ AnthonyTriesDunsparceSwarm:
 	iftrue .Generic
 	setflag ENGINE_DUNSPARCE_SWARM
 	getmonname STRING_BUFFER_4, DUNSPARCE
-	swarm SWARM_DUNSPARCE, DARK_CAVE_VIOLET_ENTRANCE
-	getlandmarkname STRING_BUFFER_5, DARK_CAVE
+;	swarm SWARM_DUNSPARCE, DARK_CAVE_VIOLET_ENTRANCE
+	getlandmarkname STRING_BUFFER_5, NEW_BARK_TOWN
 	farsjump UnknownScript_0xa05de
 
 .Generic:

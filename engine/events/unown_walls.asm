@@ -1,26 +1,14 @@
 HoOhChamber:
 	ld hl, wPartySpecies
 	ld a, [hl]
-	; is Ho-oh the first Pokémon in the party? If not, we're done
-	call GetPokemonIndexFromID
-	ld a, l
-	sub LOW(HO_OH)
-	if HIGH(HO_OH) == 0
-		or h
-	else
-		ret nz
-		if HIGH(HO_OH) == 1
-			dec h
-		else
-			ld a, h
-			cp HIGH(HO_OH)
-		endc
-	endc
-	ret nz
+	cp HO_OH ; is Ho-oh the first Pokémon in the party?
+	jr nz, .done ; if not, we're done
 	call GetMapAttributesPointer ; pointless?
 	ld de, EVENT_WALL_OPENED_IN_HO_OH_CHAMBER
 	ld b, SET_FLAG
-	jp EventFlagAction
+	call EventFlagAction
+.done
+	ret
 
 OmanyteChamber:
 	call GetMapAttributesPointer ; pointless?
@@ -67,12 +55,13 @@ SpecialAerodactylChamber:
 	push de
 	push bc
 
+; TODO: Replace NewBarkTown_MapAttributes with the appropriate label for the Aerodactyl chamber.
 	call GetMapAttributesPointer
 	ld a, h
-	cp HIGH(RuinsOfAlphAerodactylChamber_MapAttributes)
+	cp HIGH(NewBarkTown_MapAttributes)
 	jr nz, .nope
 	ld a, l
-	cp LOW(RuinsOfAlphAerodactylChamber_MapAttributes)
+	cp LOW(NewBarkTown_MapAttributes)
 	jr nz, .nope
 
 	ld de, EVENT_WALL_OPENED_IN_AERODACTYL_CHAMBER
@@ -94,12 +83,13 @@ SpecialKabutoChamber:
 	push hl
 	push de
 
+; TODO: Replace NewBarkTown_MapAttributes with the appropriate label for the Kabuto chamber.
 	call GetMapAttributesPointer
 	ld a, h
-	cp HIGH(RuinsOfAlphKabutoChamber_MapAttributes)
+	cp HIGH(NewBarkTown_MapAttributes)
 	jr nz, .done
 	ld a, l
-	cp LOW(RuinsOfAlphKabutoChamber_MapAttributes)
+	cp LOW(NewBarkTown_MapAttributes)
 	jr nz, .done
 
 	ld de, EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
