@@ -1,16 +1,16 @@
 	object_const_def ; object_event constants
 
-Route01_MapScripts:
+OldCity_MapScripts:
 	db 0
 
 	db 0
 
-Route01_MapEvents:
+OldCity_MapEvents:
 	db 0, 0 ; filler
 
 	db 2 ; warps
-	warp_event 8,  5, SILENT_HILLS, 1
-	warp_event 9,  5, SILENT_HILLS, 2
+	warp_event 16, 33, SILENT_HILLS, 3
+	warp_event 17, 33, SILENT_HILLS, 4
 
 	db 0 ; coord events
 

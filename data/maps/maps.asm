@@ -48,6 +48,7 @@ MapGroup_Olivine:
 MapGroup_Mahogany:
 
 MapGroup_Dungeons:
+	map SilentHills, TILESET_FOREST, ROUTE, ILEX_FOREST, MUSIC_UNION_CAVE, FALSE, PALETTE_AUTO, FISHGROUP_OCEAN
 
 MapGroup_Ecruteak:
 
@@ -62,6 +63,7 @@ MapGroup_Azalea:
 MapGroup_LakeOfRage:
 
 MapGroup_Violet:
+	map OldCity, TILESET_JOHTO, TOWN, VIOLET_CITY, MUSIC_VIOLET_CITY, FALSE, PALETTE_AUTO, FISHGROUP_POND
 
 MapGroup_Goldenrod:
 	map Route34, TILESET_JOHTO_MODERN, ROUTE, ROUTE_34, MUSIC_ROUTE_36, FALSE, PALETTE_AUTO, FISHGROUP_SHORE

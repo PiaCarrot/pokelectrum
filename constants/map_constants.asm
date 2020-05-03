@@ -31,6 +31,7 @@ ENDM
 	newgroup                                                      ;  2  7
 
 	newgroup                                                      ;  3
+	
 	map_const SILENT_HILLS,  			                   25, 18 ; 15
 
 	newgroup                                                      ;  4
@@ -46,6 +47,8 @@ ENDM
 	newgroup                                                      ;  9
 
 	newgroup                                                      ; 10
+	
+	map_const OLD_CITY,                                    18, 20
 
 	newgroup                                                      ; 11
 

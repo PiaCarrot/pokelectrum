@@ -81,3 +81,6 @@ SilentHills_Blocks:
 	
 SilentForest_Blocks:
 	INCBIN "maps/electrum/SilentForest.blk"
+	
+OldCity_Blocks:
+	INCBIN "maps/electrum/OldCity18x20.blk"

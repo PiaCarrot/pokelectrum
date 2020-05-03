@@ -105,6 +105,8 @@ ENDM
 	
 	map_attributes SilentForest, SILENT_FOREST, $05, SOUTH
 	connection south, SilentTown, SILENT_TOWN, 1
+	
+	map_attributes OldCity, OLD_CITY, $85, 0
 
 	map_attributes NewBarkTown, NEW_BARK_TOWN, $05, 0
 
